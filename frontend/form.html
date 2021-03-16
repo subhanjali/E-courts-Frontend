@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login/Registration</title>
+    <link rel="stylesheet" href="styleform.css">
+</head>
+<body>
+  <header>
+    <h1>E-Court</h1>
+    <nav>
+        <ul>
+            <li><a href="/home.html">Home</a></li>
+            <li><a href="/file.html">File case</a></li>
+            <li><a href="/status.html">Check status</a></li>
+            <li><a href="/judge.html">judge login</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+    <div class="hero">
+        <div class="form-box">
+        <div class="button-box">
+            <div id="btn"></div>
+            <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+            <button type="button" class="toggle-btn" onclick="register()">Registration</button>
+        </div>
+
+        <form id="login" class="input-group"><br>
+            <div class="space">
+                <label for="UserID">User ID &ensp;</label>
+                <input type="text" class="input-field" name="UserID" placeholder="User ID" required><br>
+               </div> <br>
+
+               <div class="space">
+                <label for="Password">Password  &ensp;</label>
+                <input type="password" class="input-field" name=Password placeholder="Enter Password" required><br>
+               </div> <br>
+
+               <div class="space">
+                <label for="User">User Type &ensp; </label>
+                <select name="User">
+                  <option value="o1">Judge</option>
+                  <option value="o2">Lawyer</option>
+                </select><br>
+                </div> <br><br>
+
+                <div id="login-btn" class="space">
+                    <button type="submit" class="submit-btn">Log In</button>
+                    <div class="space">
+        </form>
+
+        <form id="register" class="input-group">
+           <div class="space">
+          <label for="UserID">User ID &ensp;</label>
+          <input type="text" class="input-field" name="UserID" placeholder="User ID" required><br>
+         </div>
+
+         <div class="space">
+          <label for="Password">Password  &ensp;</label>
+          <input type="password" class="input-field" name=Password placeholder="Enter Password" required><br>
+         </div>
+
+          <div class="space">
+          <label for="Confirm">Confirm Password </label>
+          <input type="password" class="input-field" name="Confirm" placeholder="Confirm Password" required><br>
+         </div>
+
+          <input type="checkbox" class="check-box"><span>Remember Password</span><br>
+
+          <div class="space">
+          <label for="Email">Email &ensp; </label>
+          <input type="email" class="input-field" name="Email" placeholder="Enter Email" required><br>
+          </div>
+
+          <div class="space">
+          <label for="FirstName">First Name &ensp; </label>
+          <input type="text" class="input-field" name="FirstName" placeholder="First Name" required><br>
+          </div>
+
+          <div class="space">
+          <label for="LastName">Second Name &ensp; </label>
+          <input type="text" class="input-field" name="LastName" placeholder="Last Name" required><br>
+          </div>
+
+          <div class="space">
+          <label for="User">User Type &ensp; </label>
+          <select name="User">
+            <option value="o1">Judge</option>
+            <option value="o2">Lawyer</option>
+          </select><br>
+          </div>
+
+          <div class="space">
+              <label for="court">Court</label>
+              <input type="text" class="input-field" name="court" placeholder="court" required><br>
+          </div>
+
+          <div class="space">
+              <label for="bar">Bar Registration No.</label>
+              <input type="text" class="input-field" name="bar" placeholder="Registration No." required><br>
+          </div>
+
+          <div class="space">
+              <label for="contact">Contact No.</label>
+              <input type="number" class="input-field" name="contact" placeholder="Contact No." required><br>
+          </div>
+
+          <div class="space">
+              <label for="gender">Gender</label>
+              <input type="text" class="input-field" name="gender" placeholder="Gender" required><br>
+          </div>
+
+          <div class="space">
+              <label for="DOB">Date Of Birth</label>
+              <input type="date" class="input-field" name="DOB" placeholder="DOB" required><br>
+          </div>
+
+          <div class="space">
+              <label for="address">Address</label>
+              <input type="text" class="input-field" name="address" placeholder="Address" required><br>
+          </div>
+          <div class="space">
+          <button type="submit" class="submit-btn">Register</button>
+          <div class="space">
+        </form>
+    </div>
+    </div>
+
+    <script>
+        var x = document.getElementById("login");
+        var y = document.getElementById("register");
+        var z = document.getElementById("btn");
+
+        function register(){
+            x.style.left = "-400px";
+            y.style.left = "450px";
+            z.style.left = "110px";
+        }
+
+        function login(){
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left = "0px";
+        }
+    </script>
+</body>
+</html>
