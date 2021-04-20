@@ -1,131 +1,240 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Login/Registration</title>
-    <link rel="stylesheet" href="styleform.css">
+  <title>E-Courts</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-  <header>
-    <h1>E-Court</h1>
-    <nav>
-        <ul>
-            <li><a href="/home.html">Home</a></li>
-            <li><a href="/file.html">File case</a></li>
-            <li><a href="/status.html">Check status</a></li>
-            <li><a href="/judge.html">judge login</a></li>
-        </ul>
+
+<header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
+  <div class="container">
+      <div class="row ">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="./" class="navbar-brand">E-Courts</a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="home.html">Home</a>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="about.html">About</a></li>
+            <li><a href="#">Supreme Court</a></li>
+            <li><a href="#">High Courts</a></li>
+            <li><a href="#">District Courts</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Contact</a>
+        </li>
+        <li>
+          <a href="checkstatus.html">Check Status</a>
+        </li>
+        <li >
+          <a href="form.html">Judge Login/Sign Up</a>
+        </li>
+      <li >  <div class="wrap">
+   <div class="search">
+     <form class="navbar-form navbar-right">
+       <div class="form-group">
+         <input type="text" class="form-control" placeholder="Search">
+
+       <button type="submit" class="btn"><span style="color:white;" class="fa fa-search"></span></button>
+     </form>
+   </div></div>
+</div>  </li>
+      </ul>
     </nav>
-</header>
+  </div>
+</header><br /><br ><br >
 
 
-    <div class="hero">
-        <div class="form-box">
-        <div class="button-box">
-            <div id="btn"></div>
-            <button type="button" class="toggle-btn" onclick="login()">Log In</button>
-            <button type="button" class="toggle-btn" onclick="register()">Registration</button>
-        </div>
+<div class="container">
+  <div class="container-fluid ">
+    <h1 style="color:white;">Check Status Using:</h1>
+    <h2></h2>
+<br>
+  <div class="row ">
+<form action="/" class="decor" >
+  <div class="col-sm-9 col-md-6 col-lg-3 info2" style=" "><br>
 
-        <form id="login" class="input-group"><br>
-            <div class="space">
-                <label for="UserID">User ID &ensp;</label>
-                <input type="text" class="input-field" name="UserID" placeholder="User ID" required><br>
-               </div> <br>
+    <form id="login" class="input-group"><br>
+        <div class="space">
+            <label for="UserID">User ID &ensp;</label>
+            <input type="text" class="input-field" name="UserID" placeholder="User ID" required><br>
+           </div> <br>
 
-               <div class="space">
-                <label for="Password">Password  &ensp;</label>
-                <input type="password" class="input-field" name=Password placeholder="Enter Password" required><br>
-               </div> <br>
-
-               <div class="space">
-                <label for="User">User Type &ensp; </label>
-                <select name="User">
-                  <option value="o1">Judge</option>
-                  <option value="o2">Lawyer</option>
-                </select><br>
-                </div> <br><br>
-
-                <div id="login-btn" class="space">
-                    <button type="submit" class="submit-btn">Log In</button>
-                    <div class="space">
-        </form>
-
-        <form id="register" class="input-group">
            <div class="space">
-          <label for="UserID">User ID &ensp;</label>
-          <input type="text" class="input-field" name="UserID" placeholder="User ID" required><br>
-         </div>
+            <label for="Password">Password  &ensp;</label>
+            <input type="password" class="input-field" name=Password placeholder="Enter Password" required><br>
+           </div> <br>
 
-         <div class="space">
-          <label for="Password">Password  &ensp;</label>
-          <input type="password" class="input-field" name=Password placeholder="Enter Password" required><br>
-         </div>
+           <div class="space">
+            <label for="User">User Type &ensp; </label>
+            <select name="User">
+              <option value="o1">Judge</option>
+              <option value="o2">Lawyer</option>
+            </select><br>
+            </div> <br><br>
 
-          <div class="space">
-          <label for="Confirm">Confirm Password </label>
-          <input type="password" class="input-field" name="Confirm" placeholder="Confirm Password" required><br>
-         </div>
+            <div id="login-btn" class="space">
+                <button type="submit" class="submit-btn">Log In</button>
+                <div class="space">
+    </form>
+  </div></form>
 
-          <input type="checkbox" class="check-box"><span>Remember Password</span><br>
 
-          <div class="space">
-          <label for="Email">Email &ensp; </label>
-          <input type="email" class="input-field" name="Email" placeholder="Enter Email" required><br>
-          </div>
+  <div class="col-sm-9 col-md-6 col-lg-3 info2" style=" " id="formar">
+    <form id="register" class="input-group">
+       <div class="space">
+      <label for="UserID">User ID &ensp;</label>
+      <input type="text" class="input-field" name="UserID" placeholder="User ID" required><br>
+     </div>
 
-          <div class="space">
-          <label for="FirstName">First Name &ensp; </label>
-          <input type="text" class="input-field" name="FirstName" placeholder="First Name" required><br>
-          </div>
+     <div class="space">
+      <label for="Password">Password  &ensp;</label>
+      <input type="password" class="input-field" name=Password placeholder="Enter Password" required><br>
+     </div>
 
-          <div class="space">
-          <label for="LastName">Second Name &ensp; </label>
-          <input type="text" class="input-field" name="LastName" placeholder="Last Name" required><br>
-          </div>
+      <div class="space">
+      <label for="Confirm">Confirm Password </label>
+      <input type="password" class="input-field" name="Confirm" placeholder="Confirm Password" required><br>
+     </div>
 
-          <div class="space">
-          <label for="User">User Type &ensp; </label>
-          <select name="User">
-            <option value="o1">Judge</option>
-            <option value="o2">Lawyer</option>
-          </select><br>
-          </div>
+      <input type="checkbox" class="check-box"><span>Remember Password</span><br>
 
-          <div class="space">
-              <label for="court">Court</label>
-              <input type="text" class="input-field" name="court" placeholder="court" required><br>
-          </div>
+      <div class="space">
+      <label for="Email">Email &ensp; </label>
+      <input type="email" class="input-field" name="Email" placeholder="Enter Email" required><br>
+      </div>
 
-          <div class="space">
-              <label for="bar">Bar Registration No.</label>
-              <input type="text" class="input-field" name="bar" placeholder="Registration No." required><br>
-          </div>
+      <div class="space">
+      <label for="FirstName">First Name &ensp; </label>
+      <input type="text" class="input-field" name="FirstName" placeholder="First Name" required><br>
+      </div>
 
-          <div class="space">
-              <label for="contact">Contact No.</label>
-              <input type="number" class="input-field" name="contact" placeholder="Contact No." required><br>
-          </div>
+      <div class="space">
+      <label for="LastName">Second Name &ensp; </label>
+      <input type="text" class="input-field" name="LastName" placeholder="Last Name" required><br>
+      </div>
 
-          <div class="space">
-              <label for="gender">Gender</label>
-              <input type="text" class="input-field" name="gender" placeholder="Gender" required><br>
-          </div>
+      <div class="space">
+      <label for="User">User Type &ensp; </label>
+      <select name="User">
+        <option value="o1">Judge</option>
+        <option value="o2">Lawyer</option>
+      </select><br>
+      </div>
 
-          <div class="space">
-              <label for="DOB">Date Of Birth</label>
-              <input type="date" class="input-field" name="DOB" placeholder="DOB" required><br>
-          </div>
+      <div class="space">
+          <label for="court">Court</label>
+          <input type="text" class="input-field" name="court" placeholder="court" required><br>
+      </div>
 
-          <div class="space">
-              <label for="address">Address</label>
-              <input type="text" class="input-field" name="address" placeholder="Address" required><br>
-          </div>
-          <div class="space">
-          <button type="submit" class="submit-btn">Register</button>
-          <div class="space">
-        </form>
+      <div class="space">
+          <label for="bar">Bar Registration No.</label>
+          <input type="text" class="input-field" name="bar" placeholder="Registration No." required><br>
+      </div>
+
+      <div class="space">
+          <label for="contact">Contact No.</label>
+          <input type="number" class="input-field" name="contact" placeholder="Contact No." required><br>
+      </div>
+
+      <div class="space">
+          <label for="gender">Gender</label>
+          <input type="text" class="input-field" name="gender" placeholder="Gender" required><br>
+      </div>
+
+      <div class="space">
+          <label for="DOB">Date Of Birth</label>
+          <input type="date" class="input-field" name="DOB" placeholder="DOB" required><br>
+      </div>
+
+      <div class="space">
+          <label for="address">Address</label>
+          <input type="text" class="input-field" name="address" placeholder="Address" required><br>
+      </div>
+      <div class="space">
+      <button type="submit" class="submit-btn">Register</button>
+      <div class="space">
+    </form>
+     </div>
+     </div>
+   </div>
+ </div>
+
+
+
+
+
+
     </div>
     </div>
+    <hr><br>
+      <footer class="site-footer fix">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-6">
+              <h6>About</h6>
+              <p class="text-justify"><i>TOWARDS A DIGITAL INDIA </i> The e-Courts project was conceptualized on the basis of the National Policy and Action Plan for Implementation of information and communication technology in the Indian Judiciary–2005 submitted by e-Committee, with a vision to transform the Indian Judiciary by ICT enablement of Courts.</p>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+              <h6>Categories</h6>
+              <ul class="footer-links">
+                <li><a href="">Supreme Court</a></li>
+                <li><a href="">High Courts</a></li>
+                <li><a href="">District Courts</a></li>
+                <li><a href="">CONTACT US</a></li>
+
+              </ul>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+              <h6>Quick Links</h6>
+              <ul class="footer-links">
+                <li><a href="">About Us</a></li>
+                <li><a href="">Contact Us</a></li>
+                <li><a href="">Contribute</a></li>
+                <li><a href="">Privacy Policy</a></li>
+
+              </ul>
+            </div>
+          </div>
+          <hr>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+              <p class="copyright-text">Copyright &copy; 2021
+           <a href="#">E-Courts</a>.
+              </p>
+            </div>
+
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <ul class="social-icons">
+                <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </footer>
 
     <script>
         var x = document.getElementById("login");

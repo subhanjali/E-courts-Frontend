@@ -60,80 +60,49 @@
     </nav>
   </div>
 </header><br /><br ><br >
-<!-- navbar ends here -->
+<!-- nav bar ends here -->
 
-<div class="container">
-  <div class="row">
-    <div class="col-sm-12 col-md-10">
-<h2>Enter CNR number to search</h2><br>
-
-<form id="cnrsearch"  action="searchresults.html">
-  <input type="text" placeholder="Enter CNR..." name="search" style="color:black" value="Searched CNR No">
-  <button type="submit"><i class="fa fa-search"></i></button>
-</form>
-
-<br><br>
-<table style="width:100%">
-  <h3>Case Details</h3><br>
-  <tr>
-    <th >Case Type</th>
-    <td colspan="3">Write the case type here</td>
-    </tr>
-  <tr>
-    <th>Filing Date</th>
-      <td>dd/mm/yyyy</td>
-    <th>Registration Date</th>
-    <td>dd/mm/yyyy</td>
-
-  </tr>
-  <tr>
-    <th >CNR Number</th>
-    <td colspan="3">Write the CNR Number here</td>
-    </tr>
-
-</table>
-
-<table style="width:100%"><br><br>
-  <h3>Case Status</h3><br>
-  <tr>
-    <th >First Hearing Date</th>
-    <td colspan="3">Write the First Hearing Date here</td>
-    </tr>
-  <tr>
-    <th>Next Hearing Date</th>
-      <td colspan="3">Write the next Hearing Date here</td>
+<div class="containercasefile casefilediv">
+  <form id="casefile" action="" method="post">
+    <h2>File a case:</h2>
+    <h4>Please provide the following details:</h4>
+    <fieldset>
+      <input placeholder="Your name" type="text" tabindex="1" style="color:#101820FF" required autofocus>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Your Address" type="text" tabindex="2" required style="color:#101820FF">
+    </fieldset>
+    <fieldset>
+      <input placeholder="Your Phone Number" type="tel" tabindex="3" required style="color:#101820FF">
+    </fieldset>
 
 
-  </tr>
-  <tr>
-    <th >Stage of case</th>
-    <td colspan="3">Write the Stage of case here</td>
-    </tr>
+<fieldset>
+  <input placeholder="Subject" type="text" tabindex="3" required style="color:#101820FF">
+</fieldset>
 
-    <tr>
-      <th >Court Number and Judge</th>
-      <td colspan="3">Write the Court Number and Judge here</td>
-      </tr>
+<label for="CaseType">Court Type: </label>
+<select  id="CourtType">
+<option value="Supreme Court">Supreme Court</option>
+<option value="High Court">High Court</option>
+<option value="District Court">District Court</option>
+<option value="Session Court">Session Court</option>
+</select ><br>
+<label for="CaseType">Case Type: </label>
+<select id="CaseType" name="Case Type">
+<option value="Civil">Civil</option>
+<option value="Criminal">Criminal</option>
+</select><br>
+<label for="myfile">Select files: </label>
+ <input type="file" id="myfile" name="myfile" multiple><br>
+    <fieldset>
+      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+    </fieldset>
 
-</table>
-<table style="width:100%"><br><br>
-  <h3>Petitioner and advocate</h3><br>
-  <tr>
-    <td colspan="3">Write above details</td>
-    </tr>
-
-</table>
-<table style="width:100%"><br><br>
-  <h3>Respondent and advocate</h3><br>
-  <tr>
-    <td colspan="3">Write above details</td>
-    </tr>
-
-</table>
-</div></div></div>
-
-<!-- footer -->
-<br>
+  </form>
+</div>
+<!-- footer here -->
+<hr><br>
   <footer class="site-footer fix">
     <div class="container">
       <div class="row">
